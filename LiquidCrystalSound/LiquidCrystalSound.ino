@@ -63,117 +63,143 @@ byte  Char7[8] = {0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b1111
  lcd.createChar(8, clearChar);
   
   // This tests the mapped value of salida and according to that value, the output will be 
-if(salida==0)
-  {
+   switch ( salida )  
+   {
+   case 0 : 
+   {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write((byte)0);
-  }
-else if(salida==1)
-   {
+  }  
+  break;
+  case 1: 
+  {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(1);
    }
-else if(salida==2)
+   break;
+   case 2: 
    {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(2);
    }
-else if(salida==3)
+   break;
+   case 3: 
    {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(3);
    }
-else if(salida==4)
+   break;
+   case 4:
    {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(4);
    }
-else if(salida==5)
+   break;
+   case 5:
    {
      lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(5);
    }
-else if(salida==6)
+   break;
+   case 6:
    {
     lcd.setCursor(4,0);
      lcd.write(8);
      lcd.setCursor(4,1);
      lcd.write(6);
    }
-else if(salida==7)
+   break;
+   case 7:
    {
     lcd.setCursor(4,0);
      lcd.write(char(8));
      lcd.setCursor(4,1);
      lcd.write(7);
    }
-else if(salida==8)
-   {
+   break;
+   case 8:
+  {
     lcd.setCursor(4,0);
      lcd.write((byte)0);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==9)
+   break;
+   case 9:
    {
     lcd.setCursor(4,0);
      lcd.write(1);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==10)
+   break;
+   case 10:
    {
     lcd.setCursor(4,0);
      lcd.write(2);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==11)
+   break;
+   case 11:
    {
     lcd.setCursor(4,0);
      lcd.write(3);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==12)
+   break;
+   case 12:
    {
     lcd.setCursor(4,0);
      lcd.write(4);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==13)
+   break;
+   case 13:
    {
     lcd.setCursor(4,0);
      lcd.write(5);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==14)
+   break;
+   case 14:
    {
     lcd.setCursor(4,0);
      lcd.write(6);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-else if(salida==15)
+   break;
+   case 15:
    {
      lcd.setCursor(4,0);
      lcd.write(7);
      lcd.setCursor(4,1);
      lcd.write(8);
    }
-
+   break;
+   default:
+   {
+     lcd.setCursor(4,0);
+     lcd.write(byte(0));
+     lcd.setCursor(4,1);
+     lcd.write(byte(0));
+    }
+    break;
+   }
 }
