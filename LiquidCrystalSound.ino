@@ -1,4 +1,7 @@
-// Método de barrido para un arreglo de 20 bits
+// LiquidCristal Display used as VU meter or SVI, see Readme section for details.
+ // 1 audio analog input
+ // LCD connection are made as Arduino is using: https://www.arduino.cc/en/Tutorial/HelloWorld
+ // https://github.com/Jorghe/LCD-VU-meter/
 
 #include  <LiquidCrystal.h>
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
