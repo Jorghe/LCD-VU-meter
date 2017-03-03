@@ -10,11 +10,15 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 long salida;
 int sonido=A0;
 
+// Since the LCD may vary from 16x2 to 20x4, change these values to modify your hardware display
+byte const columns = 20, rows = 4;
+byte arreglo[columns];
+
 
 void setup() 
 {
   // Initialize lcd col and row
-  lcd.begin(20,4);
+  lcd.begin(columns,rows);
 }
 
 void loop() 
@@ -63,114 +67,114 @@ byte  Char7[8] = {0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b1111
   // This tests the mapped value of salida and according to that value, the output will be 
 if(salida==0)
   {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write((byte)0);
   }
 else if(salida==1)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(1);
    }
 else if(salida==2)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(2);
    }
 else if(salida==3)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(3);
    }
 else if(salida==4)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(4);
    }
 else if(salida==5)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(5);
    }
 else if(salida==6)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(8);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(6);
    }
 else if(salida==7)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(char(8));
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(7);
    }
 else if(salida==8)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write((byte)0);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==9)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(1);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==10)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(2);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==11)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(3);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==12)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(4);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==13)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(5);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==14)
    {
-    lcd.setCursor(4,0);
+    lcd.setCursor(col,0);
      lcd.write(6);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col,1);
      lcd.write(8);
    }
 else if(salida==15)
    {
-     lcd.setCursor(4,0);
+     lcd.setCursor(col,0);
      lcd.write(7);
-     lcd.setCursor(4,1);
+     lcd.setCursor(col  ,1);
      lcd.write(8);
    }
 
