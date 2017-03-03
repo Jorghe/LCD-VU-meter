@@ -51,7 +51,7 @@ printing();
   lcd.setCursor(0,3);
   lcd.write((generador(),HEX));
   
-} // Fin del loop
+} // End of loop
 
 void printing()
 {
@@ -61,7 +61,7 @@ void printing()
   }
 } 
 
-// This simulates an escalated input signal from 0 to 15
+// This takes an escalated input signal from 0 to 15
 int generador()
 {
 int  entrada = map(analogRead(A0),0,700,0,15);
@@ -73,7 +73,7 @@ int  entrada = map(analogRead(A0),0,700,0,15);
 
 int vumetro(int character, int col)
 {
-  // Creación de cada una de las celdas
+ // Creating every character according to the corresponding byte
 byte clearChar[8]= {0b00000,0b00000,0b00000,0b00000,0b00000,0b00000,0b00000,0b00000};
 byte  Char0[8] = {0b00000,0b00000,0b00000,0b00000,0b00000,0b00000,0b00000,0b11111};
 byte  Char1[8] = {0b00000,0b00000,0b00000,0b00000,0b00000,0b00000,0b11111,0b11111};
