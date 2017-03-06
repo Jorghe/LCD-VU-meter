@@ -14,3 +14,5 @@ http://www.ti.com/lit/ds/symlink/lm124-n.pdf
 3.5mm female and male jack in order to get the input analog signal, you might use an alligator clip or use a female jack and get the wires from it.
 
 iPod or any other player to reproduce the output signal.
+
+Check the wiki section to see diagrams and code.
