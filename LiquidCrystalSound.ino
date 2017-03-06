@@ -5,7 +5,6 @@
 
 #include  <LiquidCrystal.h>
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
- // int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0; // This might be not required
 
   // Since the size of the matrix might vary, it can be a LCD of 20x4 or 16x2 and so forth
 byte const columns = 20, rows = 4;
@@ -21,18 +20,6 @@ void setup()
 void loop() 
 {
 
-    // This order is required in order to maintain the past value (from right to left)
-   /*
-    arreglo[8] = arreglo[7];
-    arreglo[7] = arreglo[6];
-    arreglo[6] = arreglo[5];
-    arreglo[5] = arreglo[4];
-    arreglo[4] = arreglo[3];
-    arreglo[3] = arreglo[2];
-    arreglo[2] = arreglo[1];
-    arreglo[1] = arreglo[0];
-    arreglo[0] = generador();
-    */
 randomizer = generador();
 
 arreglo[0] = randomizer;
