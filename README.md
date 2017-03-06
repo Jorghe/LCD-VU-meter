@@ -15,4 +15,4 @@ http://www.ti.com/lit/ds/symlink/lm124-n.pdf
 
 iPod or any other player to reproduce the output signal.
 
-Check the wiki section to see diagrams and code.
+Check the [wiki](https://github.com/Jorghe/LCD-VU-meter/wiki) section to see diagrams and code.
