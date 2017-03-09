@@ -82,6 +82,8 @@ byte  Char7[8] = {0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b1111
  lcd.createChar(7, Char7);
  lcd.createChar(8, clearChar);
 
+int salida;
+
 if(salida==0)
   {
      lcd.setCursor(col,0);
