@@ -33,7 +33,7 @@ printing();
       arreglo[i] = arreglo[i-1];
     }
 
-  delay(100);
+  delay(50);
 
   lcd.setCursor(0,3);
   lcd.write((generador(),HEX));
@@ -41,6 +41,7 @@ printing();
 } // End of loop
 
 void printing()
+
 {
   for (int i=0; i < 20; i++)
   {
@@ -84,118 +85,111 @@ byte  Char7[8] = {0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b11111,0b1111
 
 int salida;
 
-if(salida==0)
-  {
+switch(character)
+{
+  case 0:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write((byte)0);
-  }
-else if(salida==1)
-   {
+  break;
+  case 1:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(1);
-   }
-else if(salida==2)
-   {
+  break;
+  case 2:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(2);
-   }
-else if(salida==3)
-   {
+  break;
+  case 3:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(3);
-   }
-else if(salida==4)
-   {
+  break;
+  case 4:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(4);
-   }
-else if(salida==5)
-   {
+  break;
+  case 5:
      lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(5);
-   }
-else if(salida==6)
-   {
-    lcd.setCursor(col,0);
+  break;
+  case 6:
+     lcd.setCursor(col,0);
      lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(6);
-   }
-else if(salida==7)
-   {
-    lcd.setCursor(col,0);
-     lcd.write(char(8));
+  break;
+  case 7:
+     lcd.setCursor(col,0);
+     lcd.write(8);
      lcd.setCursor(col,1);
      lcd.write(7);
-   }
-else if(salida==8)
-   {
-    lcd.setCursor(col,0);
+  break;       
+  case 8:
+     lcd.setCursor(col,0);
      lcd.write((byte)0);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==9)
-   {
-    lcd.setCursor(col,0);
+     lcd.write(7);
+  break;
+  case 9:
+     lcd.setCursor(col,0);
      lcd.write(1);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==10)
-   {
+     lcd.write(7); 
+  break;
+  case 10:
     lcd.setCursor(col,0);
      lcd.write(2);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==11)
-   {
-    lcd.setCursor(col,0);
+     lcd.write(7);
+  break;
+  case 11:
+     lcd.setCursor(col,0);
      lcd.write(3);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==12)
-   {
-    lcd.setCursor(col,0);
+     lcd.write(7);
+  break;
+  case 12:
+     lcd.setCursor(col,0);
      lcd.write(4);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==13)
-   {
-    lcd.setCursor(col,0);
+     lcd.write(7);
+  break;
+  case 13:
+     lcd.setCursor(col,0);
      lcd.write(5);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==14)
-   {
-    lcd.setCursor(col,0);
+     lcd.write(7);
+  break;
+  case 14:
+     lcd.setCursor(col,0);
      lcd.write(6);
      lcd.setCursor(col,1);
-     lcd.write(8);
-   }
-else if(salida==15)
-   {
+     lcd.write(7);
+  break;
+  case 15:
      lcd.setCursor(col,0);
      lcd.write(7);
-     lcd.setCursor(col  ,1);
+     lcd.setCursor(col,1);
+     lcd.write(7);
+  break;
+  default:
+     lcd.setCursor(col,0);
      lcd.write(8);
-   }
+     lcd.setCursor(col,1);
+     lcd.write(8);
+  break;
+}
  
  /*
    lcd.setCursor(col,3);
